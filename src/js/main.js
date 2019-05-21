@@ -43,3 +43,17 @@ const myQuestions = [
     correctAnswer: "d"
   }
 ];
+
+const sceneimg = [
+  "images/scene photos/Avengers Assembled.jpg",
+  "images/scene photos/black panther civil war.jpg",
+  "images/scene photos/captain-america.jpg",
+  "images/scene photos/civilwar.jpg",
+  "images/scene photos/doctor-strange_still_2017.jpg",
+  "images/scene photos/iron man.jpg",
+  "images/scene photos/Spider_Man.jpg",
+  "images/scene photos/spidermanshield.jpg",
+  "images/scene photos/thor hulk.jpg",
+  "images/scene photos/vision.jpg",
+  "images/scene photos/warmachine.jpg"
+];
