@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(37, 37, 38);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 90%;
+  margin: 20px;
+}
+
+a {
+  font-size: 50px;
+  color: rgb(157, 160, 164);
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
