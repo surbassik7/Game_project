@@ -44,7 +44,7 @@ const myQuestions = [
   }
 ];
 
-const sceneimg = [
+const sceneImg = [
   "images/scene photos/Avengers Assembled.jpg",
   "images/scene photos/black panther civil war.jpg",
   "images/scene photos/captain-america.jpg",
@@ -57,3 +57,16 @@ const sceneimg = [
   "images/scene photos/vision.jpg",
   "images/scene photos/warmachine.jpg"
 ];
+
+button.addEventListener("click", function() {
+  let sceneBox = document.querySelector(".scene");
+  for (var i in sceneImg) {
+    var img = new Image();
+    img.src = sceneImg[i];
+    img.style.display = "none";
+    img.addEventListener("load", function() {
+      this.parentNode.removeChild(this);
+    });
+    document.scene.appendChild(img);
+  }
+});
