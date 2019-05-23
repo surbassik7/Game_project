@@ -23,7 +23,6 @@
   </head>
   <body>
     <header class="border-bottom border-secondary 10px">
-      
         <img
         id="sheild "
         src="images/SHIELD-Logo1.png"
@@ -35,7 +34,7 @@
       </span>
     </header>
     <main>
-      <div class="container">
+      <div class="container w-100 p-3">
         <div class="row">
           <div class="col-md-4 custom_id">
             <div class="avengerslogo" id="avengers">
@@ -49,13 +48,26 @@
           </div>
           <div class="col-md-8">
             <div class="scene">
+              <img src="" class="img-fluid" alt="Responsive image" id="scene">
             </div>
           </div>
         </div>
       </div>
       <div class="jumbotron">
+        <h2 class="display-4">S.H.E.I.L.D's Avengers Initiative </h2>
+        <p class="lead">We would like to welcome to the Avengers Initiative enterance exam.</p>
+        <hr class="my-4">
+        <p>As part of your examination for the Initiative, you must complete the series of questions that test your knowledge of the Avengers with a score of 8 out of 10.</p>
+        <p class="lead"> Click to Continue</p>
       </div>
-      <button type="button" class="btn btn-secondary">Continue</button>
+        <div class="quiz-container">
+            <div class="quiz-overlay">
+                <div id="result"></div>
+            </div>
+            <div class="question-number"></div>
+            <div class="question"></div>
+            <div class="answers"></div>
+      <button type="button" class="btn btn-secondary" id="button">Continue</button>
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>
