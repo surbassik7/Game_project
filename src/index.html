@@ -47,27 +47,42 @@
             </div>
           </div>
           <div class="col-md-8">
-            <div class="scene">
-              <img src="" class="img-fluid" alt="Responsive image" id="scene">
-            </div>
+              <img src="images/scene photos/Avengers Main.jpg" id="scene" class="img-fluid" alt="Responsive image" >
           </div>
         </div>
       </div>
-      <div class="jumbotron">
-        <h2 class="display-4">S.H.E.I.L.D's Avengers Initiative </h2>
-        <p class="lead">We would like to welcome to the Avengers Initiative enterance exam.</p>
-        <hr class="my-4">
-        <p>As part of your examination for the Initiative, you must complete the series of questions that test your knowledge of the Avengers with a score of 8 out of 10.</p>
-        <p class="lead"> Click to Continue</p>
-      </div>
-        <div class="quiz-container">
-            <div class="quiz-overlay">
-                <div id="result"></div>
-            </div>
-            <div class="question-number"></div>
-            <div class="question"></div>
-            <div class="answers"></div>
-      <button type="button" class="btn btn-secondary" id="button">Continue</button>
+      <div class="jumbotron" id="jumbotron">
+        <div class="startInfo">
+          <h2 class="display-4">S.H.E.I.L.D's Avengers Initiative </h2>
+          <p class="lead">We would like to welcome to the Avengers Initiative enterance exam.</p>
+          <hr class="my-4">
+          <p>As part of your examination for the Initiative, you must complete the series of questions that test your knowledge of the Avengers with a score of 8 out of 10.</p>
+          <p class="lead"> Click to Continue</p>
+        </div>
+        <div class="questionHolder">
+          <hr class="my-4">
+          <p class=answers></p>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer1Radios" value="option1" >
+             <p id="answer1">test</p>
+          </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer2Radios" value="option2" >
+             <p id="answer2">test</p>
+          </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer3Radios" value="option3" >
+             <p id="answer3">test</p>
+          </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer4Radios" value="option4" >
+             <p id="answer4">test</p>
+          </div>
+          <button type="button" id="dark" class="btn btn-dark">Next</button>
+        </div>
+    </div>
+      <div class="question-number"></div>
+      <button type="button" id="button" class="btn btn-secondary" >Continue</button>
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>
