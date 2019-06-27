@@ -1,34 +1,29 @@
-var info = document.querySelector(".startInfo");
-const button = document.querySelector("#button");
-const dark = document.querySelector("#dark");
-const questiondisplay = document.querySelector(".questionHolder");
-const jumbotron = document.querySelector("#jumbotron");
-questiondisplay.style.display = "none";
-sceneArray = [
-  "images/scene photos/Avengers Assembled.jpg",
+var info = document.getElementById("startInfo");
+const button = document.getElementById("button");
+const dark = document.getElementById("dark");
+const questiondisplay = document.getElementById("questionHolder");
+const jumbotron = document.getElementById("jumbotron");
 
-  "images/scene photos/black panther civil war.jpg",
+imgArray = new Array();
+imgArray.push("images/scene photos/Avengers Assembled.jpg");
+imgArray.push("images/scene photos/black panther civil war.jpg");
+imgArray.push("images/scene photos/captain-america.jpg");
+imgArray.push("images/scene photos/civilwar.jpg");
+imgArray.push("images/scene photos/doctor-strange_still_2017.jpg");
+imgArray.push("images/scene photos/iron man.jpg");
+imgArray.push("images/scene photos/Spider_Man.jpg");
+imgArray.push("images/scene photos/spidermanshield.jpg");
+imgArray.push("images/scene photos/thor hulk.jpg");
+imgArray.push("images/scene photos/vision.jpg");
+imgArray.push("images/scene photos/warmachine.jpg");
+imgArray.push("images/scene photos/guardians-of-the-galaxy.jpg");
 
-  "images/scene photos/captain-america.jpg",
-
-  "images/scene photos/civilwar.jpg",
-
-  "images/scene photos/doctor-strange_still_2017.jpg",
-
-  "images/scene photos/iron man.jpg",
-
-  "images/scene photos/Spider_Man.jpg",
-
-  "images/scene photos/spidermanshield.jpg",
-
-  "images/scene photos/thor hulk.jpg",
-
-  "images/scene photos/vision.jpg",
-
-  "images/scene photos/warmachine.jpg",
-
-  "images/scene photos/guardians-of-the-galaxy.jpg"
-];
+button.addEventListener("click", function changePic() {
+  var randomPic = imgArray[Math.floor(Math.random() * imgArray.length)];
+  console.log(randomPic);
+  document.getElementById("scene").src = randomPic;
+  console.log(scene);
+});
 
 const myQuestions = [
   {
@@ -254,33 +249,25 @@ function layout() {
   let questionLocation = document.createElement("div");
   questionLocation.className = "questionLocation";
   questionLocation.innerHTML = myQuestions[0].question;
-  document.querySelector(".questionHolder").appendChild(questionLocation);
+  document.getElementById("questionHolder").appendChild(questionLocation);
 }
 
-button.addEventListener("click", function changePic() {
-  document.getElementById("scene").src = "images/scene photos/civilwar.jpg";
-  //   document.querySelector("scene" + scene).src = sceneArray[scene][1].src;
-  info.style.display = "none";
-  questiondisplay.style.display = "block";
-  button.style.display = "none";
-});
+// button.addEventListener("click", function getQuestion() {
+//   postQuest = document.querySelector(".questionLocation");
+//   answerA = document.querySelector("#answer1");
+//   answerB = document.querySelector("#answer2");
+//   answerC = document.querySelector("#answer3");
+//   answerD = document.querySelector("#answer4");
+//   console.log("Button pressed");
+// });
 
-button.addEventListener("click", function getQuestion() {
-  postQuest = document.querySelector(".questionLocation");
-  answerA = document.querySelector("#answer1");
-  answerB = document.querySelector("#answer2");
-  answerC = document.querySelector("#answer3");
-  answerD = document.querySelector("#answer4");
-  console.log("Button pressed");
-});
-
-dark.addEventListener("click", function getQuestion() {
-  postQuest = document.querySelector(".questionLocation");
-  answerA = document.querySelector("#answer1");
-  answerB = document.querySelector("#answer2");
-  answerC = document.querySelector("#answer3");
-  answerD = document.querySelector("#answer4");
-  console.log("Button pressed");
-});
+// dark.addEventListener("click", function getQuestion() {
+//   postQuest = document.querySelector(".questionLocation");
+//   answerA = document.querySelector("#answer1");
+//   answerB = document.querySelector("#answer2");
+//   answerC = document.querySelector("#answer3");
+//   answerD = document.querySelector("#answer4");
+//   console.log("Button pressed");
+// });
 
 function layout(num) {}
