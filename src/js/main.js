@@ -4,19 +4,20 @@ const dark = document.getElementById("dark");
 const questiondisplay = document.getElementById("questionHolder");
 const jumbotron = document.getElementById("jumbotron");
 
-imgArray = new Array();
-imgArray.push("images/scene photos/Avengers Assembled.jpg");
-imgArray.push("images/scene photos/black panther civil war.jpg");
-imgArray.push("images/scene photos/captain-america.jpg");
-imgArray.push("images/scene photos/civilwar.jpg");
-imgArray.push("images/scene photos/doctor-strange_still_2017.jpg");
-imgArray.push("images/scene photos/iron man.jpg");
-imgArray.push("images/scene photos/Spider_Man.jpg");
-imgArray.push("images/scene photos/spidermanshield.jpg");
-imgArray.push("images/scene photos/thor hulk.jpg");
-imgArray.push("images/scene photos/vision.jpg");
-imgArray.push("images/scene photos/warmachine.jpg");
-imgArray.push("images/scene photos/guardians-of-the-galaxy.jpg");
+imgArray = [
+  "images/scene photos/Avengers Assembled.jpg",
+  "images/scene photos/black panther civil war.jpg",
+  "images/scene photos/captain-america.jpg",
+  "images/scene photos/civilwar.jpg",
+  "images/scene photos/doctor-strange_still_2017.jpg",
+  "images/scene photos/iron man.jpg",
+  "images/scene photos/Spider_Man.jpg",
+  "images/scene photos/spidermanshield.jpg",
+  "images/scene photos/thor hulk.jpg",
+  "images/scene photos/vision.jpg",
+  "images/scene photos/warmachine.jpg",
+  "images/scene photos/guardians-of-the-galaxy.jpg"
+];
 
 button.addEventListener("click", function changePic() {
   var randomPic = imgArray[Math.floor(Math.random() * imgArray.length)];
@@ -236,38 +237,15 @@ const myQuestions = [
     correctAnswer: "a"
   }
 ];
-var quest = 0;
 
-function getQuestion() {
-  let postQuest = myQuestions[i].Question;
-  let answerA = myQuestions[i].answers.a;
-  let answerB = myQuestions[i].answers.b;
-  let answerC = myQuestions[i].answers.c;
-  let answerD = myQuestions[i].answers.d;
+var questionDiv = document.createElement("div");
+
+for (let i = 0; i < myQuestions.length; i++) {
+  button[i].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    console.log(myQuestions[i]);
+    var element = document.getElementById("questionHolder");
+    para.textContent = myQuestions[i];
+    element.appendChild(questionDiv);
+  });
 }
-function layout() {
-  let questionLocation = document.createElement("div");
-  questionLocation.className = "questionLocation";
-  questionLocation.innerHTML = myQuestions[0].question;
-  document.getElementById("questionHolder").appendChild(questionLocation);
-}
-
-// button.addEventListener("click", function getQuestion() {
-//   postQuest = document.querySelector(".questionLocation");
-//   answerA = document.querySelector("#answer1");
-//   answerB = document.querySelector("#answer2");
-//   answerC = document.querySelector("#answer3");
-//   answerD = document.querySelector("#answer4");
-//   console.log("Button pressed");
-// });
-
-// dark.addEventListener("click", function getQuestion() {
-//   postQuest = document.querySelector(".questionLocation");
-//   answerA = document.querySelector("#answer1");
-//   answerB = document.querySelector("#answer2");
-//   answerC = document.querySelector("#answer3");
-//   answerD = document.querySelector("#answer4");
-//   console.log("Button pressed");
-// });
-
-function layout(num) {}
